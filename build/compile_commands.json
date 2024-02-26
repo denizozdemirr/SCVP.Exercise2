@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/deniz/github cloned/SCVP.Exercise2/build",
+  "command": "/usr/bin/g++  -I/opt/systemc/include -g -o CMakeFiles/exercise2.dir/exor_main.cpp.o -c \"/home/deniz/github cloned/SCVP.Exercise2/exor_main.cpp\"",
+  "file": "/home/deniz/github cloned/SCVP.Exercise2/exor_main.cpp"
+}
+]

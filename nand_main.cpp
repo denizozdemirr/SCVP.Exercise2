@@ -54,7 +54,7 @@ private:
         std::cout << "SC_METHOD process() trigger counter " << cnt << " simulation time " << sc_time_stamp().to_default_time_units() << " ps Δ cycle " << sc_delta_count() << ":\tA " << (A.read() ? "'1'" : "'0'") << " B " << (B.read() ? "'1'" : "'0'") << " Z " << (Z.read() ? "'1'" : "'0'") << std::endl;
 
         // Here both signals A and B are set to true.
-        A.write(true);
+       A.write(true);
         B.write(true);
 
         // This is the second message that is printed when the process is
@@ -69,12 +69,19 @@ private:
         //  - Is the process triggered when Z changes?
         //  - Are some of the writes to A and B ignored?
 
-        //A.write(false);
-        //B.write(false);
-        //A.write(true);
-        //B.write(false);
-        //A.write(false);
-        //B.write(true);
+       A.write(false);
+       B.write(false);
+
+        //std::cout << "SC_METHOD process() trigger counter " << cnt << " simulation time " << sc_time_stamp().to_default_time_units() << " ps Δ cycle " << sc_delta_count() << ":\tA " << (A.read() ? "'1'" : "'0'") << " B " << (B.read() ? "'1'" : "'0'") << " Z " << (Z.read() ? "'1'" : "'0'") << std::endl;
+/*
+        A.write(true);
+        B.write(false);
+        std::cout << "SC_METHOD process() trigger counter " << cnt << " simulation time " << sc_time_stamp().to_default_time_units() << " ps Δ cycle " << sc_delta_count() << ":\tA " << (A.read() ? "'1'" : "'0'") << " B " << (B.read() ? "'1'" : "'0'") << " Z " << (Z.read() ? "'1'" : "'0'") << std::endl;
+
+        A.write(false);
+        B.write(true);
+         std::cout << "SC_METHOD process() trigger counter " << cnt << " simulation time " << sc_time_stamp().to_default_time_units() << " ps Δ cycle " << sc_delta_count() << ":\tA " << (A.read() ? "'1'" : "'0'") << " B " << (B.read() ? "'1'" : "'0'") << " Z " << (Z.read() ? "'1'" : "'0'") << std::endl;
+*/
 
         // Print a new line
         std::cout << std::endl;
